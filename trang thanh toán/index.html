@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore Online - Thanh Toán</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>BookStore Online</h1>
+</header>
+<main class="container">
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="https://picsum.photos/1200/300" alt="Banner">
+        <div class="banner-text">
+            <h2>Chào mừng đến với BookStore Online</h2>
+        </div>
+    </section>
+
+    <!-- Sản phẩm sách -->
+    <section class="book-info">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="book-card">
+            <img src="https://picsum.photos/150/200" alt="Book Image">
+            <div class="book-details">
+                <h3>Lập Trình Web Hiện Đại</h3>
+                <p>Giá: <span class="price">120.000 đ</span></p>
+                <button class="add-cart-btn" id="addToCartBtn">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giỏ hàng -->
+    <section class="cart-section">
+        <h2>Giỏ hàng</h2>
+        <div id="cartList"></div>
+        <div class="cart-total">Tổng: <span id="totalPrice">0 đ</span></div>
+        <button id="checkoutBtn" class="checkout-btn">Thanh Toán Ngay</button>
+    </section>
+
+    <!-- Form thanh toán -->
+    <section class="payment-form">
+        <h2>Thanh toán</h2>
+        <label>Họ và tên</label>
+        <input type="text" id="name" placeholder="Nhập họ tên">
+
+        <label>Phương thức thanh toán</label>
+        <select id="method">
+            <option value="COD">Thanh toán khi nhận hàng (COD)</option>
+            <option value="Bank">Chuyển khoản ngân hàng</option>
+            <option value="card">Thẻ ngân hàng (ATM / Visa / MasterCard)</option>
+            <option value="QR">Mã QR</option>
+        </select>
+
+        <div id="cardInfo" class="hidden">
+            <label>Số thẻ</label>
+            <input type="text" id="cardNumber" maxlength="16" placeholder="16 số">
+            <label>Ngày hết hạn (MM/YY)</label>
+            <input type="text" id="cardExpiry" placeholder="VD: 12/28">
+            <label>CVV</label>
+            <input type="password" id="cardCVV" maxlength="3" placeholder="3 số">
+        </div>
+
+        <div id="qrInfo" class="hidden">
+            <label>Quét mã QR để thanh toán</label>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=BookStorePayment" alt="QR Code">
+            <p>Quét QR để thanh toán.</p>
+        </div>
+
+        <button id="payBtn" class="btn">Thanh toán</button>
+        <div id="paymentMessage" class="payment-message"></div>
+    </section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
