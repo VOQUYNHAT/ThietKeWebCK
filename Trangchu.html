@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore - Trang bán sách</title>
+    <link rel="stylesheet" href="Trangchu.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>BookStore</h1>
+        <nav>
+            <a href="#">Trang chủ</a>
+            <a href="#">Menu</a>
+            <a href="#">Giỏ hàng</a>
+            <a href="loginregister/login.html">Đăng nhập</a>
+            <a href="loginregister/register.html">Đăng ký</a>
+        </nav>
+    </header>
+<div class="search-bar">
+    <input type="text" placeholder="Tìm kiếm sách, tác giả, thể loại...">
+    <button>Tìm kiếm</button>
+</div>
+
+    <!-- BANNER -->
+    <section class="banner-section">
+        <button class="banner-btn left" onclick="changeBanner(-1)">&#10094;</button>
+        <div class="banner-container">
+            <img src="https://picsum.photos/1200/300?1" class="banner active">
+            <img src="https://picsum.photos/1200/300?2" class="banner">
+            <img src="https://picsum.photos/1200/300?3" class="banner">
+        </div>
+        <button class="banner-btn right" onclick="changeBanner(1)">&#10095;</button>
+    </section>
+
+    <!-- SÁCH NỔI BẬT -->
+<section class="book-section">
+    <h2>🌟 Sách Nổi Bật</h2>
+    <div class="book-slider">
+        <!-- 6 sách -->
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?21" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">120.000đ</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Hạt Giống Tâm Hồn</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 3200</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?22" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">110.000đ</span></div>
+            <div class="book-info"><p class="author">Dale Carnegie</p><h3 class="title">Đắc Nhân Tâm</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span class="sold">Đã bán 4500</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?23" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">130.000đ</span></div>
+            <div class="book-info"><p class="author">George S. Clason</p><h3 class="title">Người Giàu Có Nhất Thành Babylon</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 2800</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?24" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">95.000đ</span></div>
+            <div class="book-info"><p class="author">Robin Sharma</p><h3 class="title">Tuổi Trẻ Đáng Giá Bao Nhiêu</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 3500</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?25" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">140.000đ</span></div>
+            <div class="book-info"><p class="author">T. Harv Eker</p><h3 class="title">Bí Mật Tư Duy Triệu Phú</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 2100</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?26" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">150.000đ</span></div>
+            <div class="book-info"><p class="author">Napoleon Hill</p><h3 class="title">Nghĩ Giàu Làm Giàu</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span class="sold">Đã bán 4000</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- GỢI Ý CHO BẠN -->
+<section class="book-section">
+    <h2>💡 Gợi Ý Cho Bạn</h2>
+    <div class="book-slider">
+        <!-- 6 sách -->
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">NEW</span></div>
+            <img src="https://picsum.photos/200?31" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">90.000đ</span></div>
+            <div class="book-info"><p class="author">Paulo Coelho</p><h3 class="title">Nhà Giả Kim</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 2500</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">NEW</span></div>
+            <img src="https://picsum.photos/200?32" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">100.000đ</span></div>
+            <div class="book-info"><p class="author">Paulo Coelho</p><h3 class="title">Alchemist – Nhà Giả Kim</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 2700</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?33" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">85.000đ</span></div>
+            <div class="book-info"><p class="author">Robin Sharma</p><h3 class="title">Đời Ngắn Đừng Ngủ Dài</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 3200</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?34" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">150.000đ</span></div>
+            <div class="book-info"><p class="author">Thomas L. Friedman</p><h3 class="title">Thế Giới Phẳng</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 2000</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?35" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">95.000đ</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Người Đắc Thắng</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 3100</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">HOT</span></div>
+            <img src="https://picsum.photos/200?36" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">120.000đ</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Con Đường Hạnh Phúc</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 2800</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- SÁCH BÁN CHẠY TRONG THÁNG -->
+<section class="book-section">
+    <h2>🔥 Sách Bán Chạy Trong Tháng</h2>
+    <div class="book-slider">
+        <!-- 6 sách -->
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">SALE</span></div>
+            <img src="https://picsum.photos/200?41" class="book-img" />
+            <div class="book-labels"><span class="label auth">CHÍNH HÃNG</span></div>
+            <div class="book-price"><span class="new-price">140.000đ</span><span class="discount">-30%</span></div>
+            <div class="book-info"><p class="author">Robert Kiyosaki</p><h3 class="title">Cha giàu, cha nghèo</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span class="sold">Đã bán 4200</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">SALE</span></div>
+            <img src="https://picsum.photos/200?42" class="book-img" />
+            <div class="book-labels"><span class="label auth">CHÍNH HÃNG</span></div>
+            <div class="book-price"><span class="new-price">120.000đ</span><span class="discount">-20%</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Những Người Khác</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 3500</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">SALE</span></div>
+            <img src="https://picsum.photos/200?43" class="book-img" />
+            <div class="book-labels"><span class="label auth">CHÍNH HÃNG</span></div>
+            <div class="book-price"><span class="new-price">130.000đ</span><span class="discount">-35%</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Trên Đường Băng</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 2900</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">SALE</span></div>
+            <img src="https://picsum.photos/200?44" class="book-img" />
+            <div class="book-labels"><span class="label auth">CHÍNH HÃNG</span></div>
+            <div class="book-price"><span class="new-price">150.000đ</span><span class="discount">-25%</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Đọc Vị Bất Kỳ Ai</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 2700</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">SALE</span></div>
+            <img src="https://picsum.photos/200?45" class="book-img" />
+            <div class="book-labels"><span class="label auth">CHÍNH HÃNG</span></div>
+            <div class="book-price"><span class="new-price">90.000đ</span><span class="discount">-40%</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Người Bất Tử</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 3000</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">SALE</span></div>
+            <img src="https://picsum.photos/200?46" class="book-img" />
+            <div class="book-labels"><span class="label auth">CHÍNH HÃNG</span></div>
+            <div class="book-price"><span class="new-price">140.000đ</span><span class="discount">-30%</span></div>
+            <div class="book-info"><p class="author">Viktor E. Frankl</p><h3 class="title">Đi Tìm Lẽ Sống</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 3600</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- FLASH SALE -->
+<section class="book-section">
+    <h2>⚡ Flash Sale</h2>
+    <div class="book-slider">
+        <!-- 6 sách -->
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">FLASH</span></div>
+            <img src="https://picsum.photos/200?51" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">45.000đ</span><span class="discount">-50%</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Đừng Chạy Theo Số Đông</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐⭐ <span class="sold">Đã bán 5000</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">FLASH</span></div>
+            <img src="https://picsum.photos/200?52" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">150.000đ</span><span class="discount">-35%</span></div>
+            <div class="book-info"><p class="author">Yuval Noah Harari</p><h3 class="title">Sapiens</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 3100</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">FLASH</span></div>
+            <img src="https://picsum.photos/200?53" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">90.000đ</span><span class="discount">-40%</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Tâm Lý Học Tội Phạm</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 1800</span></div>
+        </div>
+
+        <div class="book-card">
+            <div class="book-badges"><span class="tag-hot">FLASH</span></div>
+            <img src="https://picsum.photos/200?54" class="book-img" />
+            <div class="book-labels"><span class="label top-deal">TOP DEAL</span></div>
+            <div class="book-price"><span class="new-price">130.000đ</span><span class="discount">-35%</span></div>
+            <div class="book-info"><p class="author">Unknown</p><h3 class="title">Thiên Nga Đen</h3></div>
+            <div class="book-rating">⭐⭐⭐⭐ <span class="sold">Đã bán 2400</span></div>
+        </div>
+        <div>
+        </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>BOOKSTORE</h3>
+                <p>Website bán sách hiện đại – nhanh – tiện lợi.</p>
+            </div>
+
+            <div>
+                <h4>Liên hệ</h4>
+                <p>Email: support@bookstore.vn</p>
+                <p>Hotline: 0123 456 789</p>
+            </div>
+
+            <div>
+                <h4>Follow chúng tôi</h4>
+                <p>Facebook</p>
+                <p>Zalo</p>
+                <p>TikTok</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 BookStore. All rights reserved.</p>
+    </footer>
+
+    <script src="Trangchu.js"></script>
+</body>
+</html>
